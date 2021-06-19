@@ -11,7 +11,8 @@ campsiteRouter.route('/')
     res.end('Will send all the campsites to you');
 })
 .post((req, res) => {
-    res.end(`Will add the campsite ${req.body.name} with description: ${req.body.description}`);
+    res.end(`Will add the campsite ${req.body.name} 
+        with description: ${req.body.description}`);
 })
 .put((req, res) => {
     res.statusCode = 403;
@@ -36,7 +37,8 @@ campsiteRouter.route('/:campsiteId')
 })
 .put((req, res) => {
     res.write(`Updating the campsite: ${req.params.campsiteId}\n`)
-    res.end(`Will update the campsite: ${req.body.name} with description: ${req.body.description}`);
+    res.end(`Will update the campsite: ${req.body.name} 
+        with description: ${req.body.description}`);
 })
 .delete( (req, res) => {
     res.end(`Deleting campsite: ${req.params.campsiteId}`);

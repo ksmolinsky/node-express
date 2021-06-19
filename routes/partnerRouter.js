@@ -11,7 +11,8 @@ partnerRouter.route('/')
     res.end('Will send all the partners to you');
 })
 .post((req, res) => {
-    res.end(`Will add the partner ${req.body.name} with description: ${req.body.description}`);
+    res.end(`Will add the partner ${req.body.name} 
+        with description: ${req.body.description}`);
 })
 .put((req, res) => {
     res.statusCode = 403;
@@ -36,7 +37,8 @@ partnerRouter.route('/:partnerId')
 })
 .put((req, res) => {
     res.write(`Updating the partner: ${req.params.partnerId}\n`)
-    res.end(`Will update the partner: ${req.body.name} with description: ${req.body.description}`);
+    res.end(`Will update the partner: ${req.body.name} 
+        with description: ${req.body.description}`);
 })
 .delete( (req, res) => {
     res.end(`Deleting partner: ${req.params.partnerId}`);
